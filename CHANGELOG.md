@@ -1,5 +1,11 @@
 # Changelog
 
+## 9/20 Afternoon
+
+- Finished top-level routing
+- Defined types for the application
+- Decided to focus on US National Parks as Destinations
+
 ## Post npm create, before GitHub check-in
 
 - package.json

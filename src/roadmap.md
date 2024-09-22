@@ -2,6 +2,8 @@
 
 Application features: Home, Trips, Locations, Friends, Settings
 
+We are focusing on US National Parks as Locations to start with
+
 ## Routing setup
 
 - In the project

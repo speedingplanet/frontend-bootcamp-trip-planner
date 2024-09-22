@@ -34,23 +34,25 @@ export interface User {
 	lastName: string;
 	phone: string;
 	email: string;
+	address?: Address;
 	friends: User[];
 	trips: Trip[];
 }
 
-/*
-Location / Destination?
-  - id
-  - name
-	- position (latitude/longitude)
-  - Address
-*/
+interface Comment {
+	id: number;
+	userId: number;
+	user?: User;
+	tripId: number;
+	trip?: Trip;
+	// Assumes replying to another comment
+	replyToId?: number;
+}
 
-/*
-Comment
-	- id
-	- user
-	- trip
-	- replyTo
-
-*/
+/* Starting with US National Parks */
+export interface Destination {
+	id: number;
+	name: string;
+	shortName: string;
+	location: Address | LatLong | string;
+}
