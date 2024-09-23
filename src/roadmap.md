@@ -4,6 +4,12 @@ Application features: Home, Trips, Locations, Friends, Settings
 
 We are focusing on US National Parks as Locations to start with
 
+## Current work
+
+- Locations/Parks
+  - List locations
+  - Search locations
+
 ## Routing setup
 
 - In the project

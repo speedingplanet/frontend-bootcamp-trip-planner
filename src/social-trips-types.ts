@@ -51,8 +51,19 @@ interface Comment {
 
 /* Starting with US National Parks */
 export interface Destination {
-	id: number;
-	name: string;
+	id: string;
+	fullName: string;
 	shortName: string;
-	location: Address | LatLong | string;
+	location?: Address | LatLong | string;
+}
+
+export interface Park extends Destination {
+	url: string;
+	parkCode: string;
+	description: string;
+	latitude: string;
+	longitude: string;
+	states: string;
+	name: string;
+	designation: string;
 }

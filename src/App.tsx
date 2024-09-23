@@ -28,7 +28,7 @@ function App() {
 					element={<TripsManager />}
 				/>
 				<Route
-					path="/locations"
+					path="/locations/*"
 					element={<LocationsManager />}
 				/>
 				<Route
