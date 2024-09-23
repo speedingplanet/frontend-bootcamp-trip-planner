@@ -1,9 +1,9 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
-import BrowseLocations from './BrowseLocations';
 import SearchLocations from './SearchLocations';
 import parks from '../data/parks-shorter.json';
 import { Park } from '../social-trips-types';
 import LocationDetails from './LocationDetails';
+import ListDetailLocations from './ListDetailLocations';
 
 function LocationsManager() {
 	return (
@@ -37,7 +37,7 @@ function LocationsManager() {
 			<Routes>
 				<Route
 					path="browse"
-					element={<BrowseLocations locations={parks as Park[]} />}
+					element={<ListDetailLocations locations={parks as Park[]} />}
 				/>
 				<Route
 					path="search"
