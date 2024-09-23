@@ -8,7 +8,7 @@ function BrowseLocations({ locations }: BrowseLocationProps) {
 	return (
 		<ul>
 			{locations.map((park) => (
-				<li>{park.fullName}</li>
+				<li key={park.id}>{park.fullName}</li>
 			))}
 		</ul>
 	);

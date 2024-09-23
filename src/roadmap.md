@@ -8,7 +8,26 @@ We are focusing on US National Parks as Locations to start with
 
 - Locations/Parks
   - List locations
+    - Short table of data (3-5 columns?)
+    - Click on an item in the table, and we can see the details for a park
+      - Which means we need a park details view/component
+    - Sorting
+    - Filtering
+    - Fetch remotely
   - Search locations
+
+## CSS Decisions
+
+Using the List locations table above, let's make a decision about CSS. Options:
+
+- Use a library
+  - Bootstrap
+  - Tailwind
+  - Maybe something else you suggest?
+- Write CSS
+  - With a tool, like styled-components
+  - With CSS Modules
+  - Standalone, no tools
 
 ## Routing setup
 

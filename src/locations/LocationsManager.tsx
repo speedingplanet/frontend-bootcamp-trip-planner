@@ -7,13 +7,21 @@ import { Park } from '../social-trips-types';
 function LocationsManager() {
 	return (
 		<section>
-			<nav>
+			<header>
+				<h2>Locations / Parks</h2>
+			</header>
+			<nav className="mb-2">
 				<span>
 					<NavLink to="browse">Browse</NavLink>
 				</span>
 				&nbsp;|&nbsp;
 				<span>
-					<NavLink to="search">Search</NavLink>
+					<NavLink
+						to="search"
+						className="hover:underline"
+					>
+						Search
+					</NavLink>
 				</span>
 			</nav>
 			<Routes>
