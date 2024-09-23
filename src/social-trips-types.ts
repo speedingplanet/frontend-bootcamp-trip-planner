@@ -59,11 +59,19 @@ export interface Destination {
 
 export interface Park extends Destination {
 	url: string;
-	parkCode: string;
-	description: string;
-	latitude: string;
-	longitude: string;
-	states: string;
 	name: string;
+	parkCode: string;
 	designation: string;
+	description: string;
+	latLong: string;
+	states: string;
+	images?: Array<Image>;
+}
+
+export interface Image {
+	credit: string;
+	title: string;
+	altText: string;
+	caption: string;
+	url: string;
 }

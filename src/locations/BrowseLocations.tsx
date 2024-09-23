@@ -1,4 +1,3 @@
-import React from 'react';
 import { Park } from '../social-trips-types';
 
 type BrowseLocationProps = {
@@ -6,7 +5,13 @@ type BrowseLocationProps = {
 };
 
 function BrowseLocations({ locations }: BrowseLocationProps) {
-	return <p>Placeholder for Locations data. There are {locations.length} parks</p>;
+	return (
+		<ul>
+			{locations.map((park) => (
+				<li>{park.fullName}</li>
+			))}
+		</ul>
+	);
 }
 
 export default BrowseLocations;
