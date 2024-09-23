@@ -3,6 +3,7 @@ import BrowseLocations from './BrowseLocations';
 import SearchLocations from './SearchLocations';
 import parks from '../data/parks-shorter.json';
 import { Park } from '../social-trips-types';
+import LocationDetails from './LocationDetails';
 
 function LocationsManager() {
 	return (
@@ -23,6 +24,15 @@ function LocationsManager() {
 						Search
 					</NavLink>
 				</span>
+				&nbsp;|&nbsp;
+				<span>
+					<NavLink
+						to="details"
+						className="hover:underline"
+					>
+						Details
+					</NavLink>
+				</span>
 			</nav>
 			<Routes>
 				<Route
@@ -32,6 +42,10 @@ function LocationsManager() {
 				<Route
 					path="search"
 					element={<SearchLocations />}
+				/>
+				<Route
+					path="details"
+					element={<LocationDetails park={parks[1]} />}
 				/>
 			</Routes>
 		</section>

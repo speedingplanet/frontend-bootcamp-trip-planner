@@ -53,7 +53,7 @@ interface Comment {
 export interface Destination {
 	id: string;
 	fullName: string;
-	shortName: string;
+	shortName?: string;
 	location?: Address | LatLong | string;
 }
 
