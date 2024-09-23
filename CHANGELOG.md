@@ -1,5 +1,10 @@
 # Changelog
 
+## 9/23
+
+- New assets: National Park Service logo, and an NPS-inspired font
+- New dependencies: React Query and Styled Components
+
 ## 9/20 Afternoon
 
 - Finished top-level routing
