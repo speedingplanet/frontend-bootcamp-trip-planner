@@ -16,14 +16,14 @@ function ListDetailLocations({ locations }: ListDetailLocationsProps) {
 	}
 
 	return (
-		<section className="flex justify-around">
+		<section className="flex justify-stretch">
 			<div>
 				<BrowseLocations
 					locations={locations}
 					selectPark={handleSelectedPark}
 				/>
 			</div>
-			<div className="basis-1/4">
+			<div className="basis-2/4">
 				{selectedPark ? <LocationDetails park={selectedPark} /> : <p>No park selected</p>}
 			</div>
 		</section>

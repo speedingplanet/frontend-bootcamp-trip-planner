@@ -7,10 +7,9 @@ type BrowseLocationProps = {
 
 function BrowseLocations({ locations, selectPark }: BrowseLocationProps) {
 	return (
-		<ul>
+		<ul style={{ cursor: 'pointer' }}>
 			{locations.map((park) => (
 				<li
-					style={{ cursor: 'pointer' }}
 					onClick={() => selectPark(park)}
 					key={park.id}
 				>
