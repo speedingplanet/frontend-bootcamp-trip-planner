@@ -7,18 +7,16 @@
 		- Docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_headers
 		- Header name is X-Api-Key
 		- Value is your API key
-	- In FetchParks
+- In FetchParks
 		- Set up state to store parks
 		- Call useEffect with an empty dependency array!
 			- useEffect(() => {}, []) <--- DON'T FORGET
-	- In useEffect()
-		- Call fetchData()
-		- then() to get the results and set state with them
-		- Remember that the results have a data property
-		- catch() after then() to handle potential errors
-	- Load up your component and see if it works!
-		
-
+		- In useEffect()
+			- Call fetchData()
+			- then() to get the results and set state with them
+			- Remember that the results have a data property
+			- catch() after then() to handle potential errors
+- Load up your component and see if it works!
 */
 
 function FetchParks() {
