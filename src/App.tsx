@@ -14,7 +14,9 @@ function App() {
 			{/* nav>ul>li>NavLink */}
 			<header className="mb-2 text-center text-2xl">
 				<nav>
-					<h1>National Parks Social Trip Planner</h1>
+					<h1 style={{ fontFamily: 'National Park', fontWeight: '600' }}>
+						National Parks Social Trip Planner
+					</h1>
 					<hr />
 				</nav>
 			</header>
