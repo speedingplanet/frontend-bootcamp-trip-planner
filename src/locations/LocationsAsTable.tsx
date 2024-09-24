@@ -1,4 +1,3 @@
-import React from 'react';
 import { Park } from '../social-trips-types';
 
 type LocationsAsTableProps = {
