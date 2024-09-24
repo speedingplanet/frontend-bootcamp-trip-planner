@@ -5,6 +5,7 @@ import { Park } from '../social-trips-types';
 import LocationDetails from './LocationDetails';
 import ListDetailLocations from './ListDetailLocations';
 import LocationsAsTable from './LocationsAsTable';
+import FetchLocations from './FetchLocations';
 
 function LocationsManager() {
 	return (
@@ -28,6 +29,15 @@ function LocationsManager() {
 						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
 					>
 						Browse as table
+					</NavLink>
+				</span>
+				&nbsp;|&nbsp;
+				<span>
+					<NavLink
+						to="browse-async"
+						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
+					>
+						Browse asynchronously
 					</NavLink>
 				</span>
 				&nbsp;|&nbsp;
@@ -57,6 +67,10 @@ function LocationsManager() {
 				<Route
 					path="browse-table"
 					element={<LocationsAsTable locations={parks as Park[]} />}
+				/>
+				<Route
+					path="browse-async"
+					element={<FetchLocations />}
 				/>
 				<Route
 					path="search"
