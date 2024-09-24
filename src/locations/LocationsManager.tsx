@@ -4,6 +4,7 @@ import parks from '../data/parks-shorter.json';
 import { Park } from '../social-trips-types';
 import LocationDetails from './LocationDetails';
 import ListDetailLocations from './ListDetailLocations';
+import LocationsAsTable from './LocationsAsTable';
 
 function LocationsManager() {
 	return (
@@ -13,13 +14,27 @@ function LocationsManager() {
 			</header>
 			<nav className="mb-2">
 				<span>
-					<NavLink to="browse">Browse</NavLink>
+					<NavLink
+						to="browse"
+						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
+					>
+						Browse
+					</NavLink>
+				</span>
+				&nbsp;|&nbsp;
+				<span>
+					<NavLink
+						to="browse-table"
+						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
+					>
+						Browse as table
+					</NavLink>
 				</span>
 				&nbsp;|&nbsp;
 				<span>
 					<NavLink
 						to="search"
-						className="hover:underline"
+						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
 					>
 						Search
 					</NavLink>
@@ -28,7 +43,7 @@ function LocationsManager() {
 				<span>
 					<NavLink
 						to="details"
-						className="hover:underline"
+						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
 					>
 						Details
 					</NavLink>
@@ -38,6 +53,10 @@ function LocationsManager() {
 				<Route
 					path="browse"
 					element={<ListDetailLocations locations={parks as Park[]} />}
+				/>
+				<Route
+					path="browse-table"
+					element={<LocationsAsTable locations={parks as Park[]} />}
 				/>
 				<Route
 					path="search"

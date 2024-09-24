@@ -1,5 +1,9 @@
 # Changelog
 
+## 9/24
+
+- List-Detail view for Locations
+
 ## 9/23
 
 - New assets: National Park Service logo, and an NPS-inspired font

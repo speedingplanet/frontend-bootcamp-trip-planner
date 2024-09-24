@@ -14,6 +14,7 @@ We are focusing on US National Parks as Locations to start with
     - Sorting
     - Filtering
     - Fetch remotely
+    - Detail view should be "sticky", e.g. it should not scroll out of view
   - Search locations
 
 ## CSS Decisions
