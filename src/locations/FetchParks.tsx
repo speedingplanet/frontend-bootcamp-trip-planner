@@ -16,6 +16,10 @@
 			- then() to get the results and set state with them
 			- Remember that the results have a data property
 			- catch() after then() to handle potential errors
+		- In the return statement
+			- Write something like `There are ${parks.length} parks`
+			- Or you could iterate over the results and print out the park names
+			- Or you could use BrowseLocations and pass it the parks you downloaded
 - Load up your component and see if it works!
 */
 
