@@ -5,7 +5,7 @@ import { Park } from '../social-trips-types';
 import LocationDetails from './LocationDetails';
 import ListDetailLocations from './ListDetailLocations';
 import LocationsAsTable from './LocationsAsTable';
-import FetchLocations from './FetchLocations';
+import FetchParks from './FetchParks';
 
 function LocationsManager() {
 	return (
@@ -37,7 +37,7 @@ function LocationsManager() {
 						to="browse-async"
 						className={({ isActive }) => (isActive ? 'font-bold underline' : 'hover:underline')}
 					>
-						Browse asynchronously
+						Browse async
 					</NavLink>
 				</span>
 				&nbsp;|&nbsp;
@@ -70,7 +70,7 @@ function LocationsManager() {
 				/>
 				<Route
 					path="browse-async"
-					element={<FetchLocations />}
+					element={<FetchParks />}
 				/>
 				<Route
 					path="search"
