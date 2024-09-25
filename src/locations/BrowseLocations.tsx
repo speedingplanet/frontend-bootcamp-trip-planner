@@ -2,7 +2,7 @@ import { Park } from '../social-trips-types';
 
 type BrowseLocationProps = {
 	locations: Park[];
-	selectPark: (park: Park) => void;
+	selectPark?: (park: Park) => void;
 };
 
 function BrowseLocations({ locations, selectPark }: BrowseLocationProps) {
@@ -10,7 +10,7 @@ function BrowseLocations({ locations, selectPark }: BrowseLocationProps) {
 		<ul style={{ cursor: 'pointer' }}>
 			{locations.map((park) => (
 				<li
-					onClick={() => selectPark(park)}
+					onClick={() => selectPark && selectPark(park)}
 					key={park.id}
 				>
 					{park.fullName}

@@ -23,8 +23,43 @@
 - Load up your component and see if it works!
 */
 
+import { useEffect, useState } from 'react';
+import { Park } from '../social-trips-types';
+import BrowseLocations from './BrowseLocations';
+
+async function fetchData() {
+	let response = await fetch('https://developer.nps.gov/api/v1/parks', {
+		headers: {
+			'X-Api-Key': 'xaHFbOuY2aa3gSWgko8TKsM1ob0Oz7D63dAzdgxN',
+		},
+	});
+
+	if (response.ok) {
+		let results = await response.json();
+		return results.data;
+	} else {
+		throw new Error(`Bad HTTP response: ${response.status}`);
+	}
+}
+
 function FetchParks() {
-	return <div>FetchParks</div>;
+	const [parks, setParks] = useState<Park[]>([]);
+
+	useEffect(() => {
+		// Sticks to async mode, but needs another function
+		async function getData() {
+			try {
+				let parks = await fetchData();
+				setParks(parks);
+			} catch (error) {
+				console.error('Failed to fetch parks:', error);
+			}
+		}
+
+		getData();
+	}, []);
+
+	return <BrowseLocations locations={parks} />;
 }
 
 export default FetchParks;
