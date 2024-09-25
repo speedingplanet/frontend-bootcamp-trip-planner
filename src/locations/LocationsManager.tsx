@@ -78,7 +78,12 @@ function LocationsManager() {
 				/>
 				<Route
 					path="details"
-					element={<LocationDetails park={parks[1]} />}
+					element={
+						<LocationDetails
+							park={parks[6]}
+							preferredImage={0}
+						/>
+					}
 				/>
 			</Routes>
 		</section>
