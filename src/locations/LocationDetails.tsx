@@ -28,7 +28,7 @@ function LocationDetails({
 	}
 
 	return (
-		<section className="border-4 border-black min-w-96">
+		<section className="border-4 border-black w-1/2">
 			<div className="text-center text-lg border-b-2">{fullName}</div>
 			<div className="p-2 border-b-2">{description}</div>
 			<div className="flex border-b-2">
@@ -36,9 +36,10 @@ function LocationDetails({
 				<div className="flex-1 pl-2 border-r-2">Longitude: {long}</div>
 				<div className="flex-1 pl-2">{states}</div>
 			</div>
-			<div className="max-h-64">
+			<div>
 				{selectedImage ? (
 					<img
+						className="object-scale-down"
 						src={selectedImage.url}
 						alt={selectedImage.altText}
 						title={selectedImage.title}
