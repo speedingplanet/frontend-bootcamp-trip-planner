@@ -1,17 +1,16 @@
 export interface Trip {
 	id: number;
 	name: string;
-	destination?: string | Location;
-	address?: Address;
+	destination?: string | Park | Destination['id'];
 	duration?: number;
 	startDate?: Date;
 	endDate?: Date;
 	organizer: User;
 	// Always participants, but the array might be empty
-	participants: User[];
+	participants: User[] | User['id'][];
 
 	// Always comments, but the array might be empty
-	comments: Comment[];
+	comments: Comment[] | Comment['id'][];
 }
 
 export interface Address {
